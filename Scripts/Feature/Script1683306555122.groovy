@@ -16,21 +16,6 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
-String dirName = RunConfiguration.getProjectDir()
-
-WebUI.navigateToUrl('https://opensource-demo.orangehrmlive.com/')
-
-WebUI.callTestCase(findTestCase('Login'), [:], FailureHandling.STOP_ON_FAILURE)
-
-WebUI.click(findTestObject('Dashboard/a_My Info'))
-
-WebUI.click(findTestObject('Dashboard/img profile'))
-
-WebUI.uploadFile(findTestObject('Dashboard/input file'), dirName + '/adibul.jpg')
-
-WebUI.click(findTestObject('Dashboard/btn save'), FailureHandling.STOP_ON_FAILURE)
-
-WebUI.verifyElementPresent(findTestObject('Dashboard/toastSuccess_uploadfoto'), 0)
+CucumberKW.runFeatureFolder('Include/features/login.feature')
 

@@ -22,7 +22,7 @@
       <guid>a72ec213-7b62-4af5-901c-88d1ec547917</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Success Upload File</testCaseId>
+      <testCaseId>Test Cases/Success Upload Photo</testCaseId>
       <usingDataBindingAtTestSuiteLevel>true</usingDataBindingAtTestSuiteLevel>
    </testCaseLink>
    <testCaseLink>

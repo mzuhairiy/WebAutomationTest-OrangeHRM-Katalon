@@ -16,17 +16,19 @@
 #""
 ## (Comments)
 #Sample Feature Definition Template
-@tag
-Feature: Title of your feature
-  I want to use this template for my feature file
+@Positive
+Feature: Upload Photo
+  User successfully edit photo profile
 
-  @tag1
-  Scenario Outline: Title of your scenario outline
-    Given I want to write a step with <name>
-    When I check for the <value> in step
-    Then I verify the <status> in step
-
+  @Positive
+  Scenario Outline: User want to edit photo profile
+    Given User is on dashboard page
+    When User clicks my info's button
+    ##And User clicks img profile button
+    ##And User upload file
+    ##And User clicks button save
+    Then User has successfully edited photo profile
+    
     Examples: 
-      | name  | value | status  |
-      | name1 |     5 | success |
-      | name2 |     7 | Fail    |
+      | username | password |
+      | Admin    | admin123 |
